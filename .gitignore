@@ -1,0 +1,5 @@
+.idea
+
+cmake-build-debug
+
+stepik_linux/root/.*
