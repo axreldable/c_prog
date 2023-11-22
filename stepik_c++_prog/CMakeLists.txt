@@ -7,5 +7,5 @@ add_executable(stepik_c++_prog test.cpp
         compile_example/square.hpp
         compile_example/square.cpp
         compile_example/main.cpp
-        compile_example/hello.cpp
+        syntax/main.cpp
 )
