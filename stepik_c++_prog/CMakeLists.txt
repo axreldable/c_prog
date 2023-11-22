@@ -7,5 +7,6 @@ add_executable(stepik_c++_prog test.cpp
         compile_example/square.hpp
         compile_example/square.cpp
         compile_example/main.cpp
-        syntax/main.cpp
+        tasks/main.cpp
+        tasks/funcs.cpp
 )
