@@ -1,3 +1,7 @@
+#include <iostream>
+
+using namespace std;
+
 int power(int x, unsigned p) {
     if (p == 0) {
         return 1;
@@ -38,4 +42,15 @@ unsigned gcd(unsigned a, unsigned b)
         return gcd(a, b % a);
     }
     return gcd(a % b, b);
+}
+
+void revert_input(int x) {
+    int xx;
+    cin >> xx;
+    if (xx == 0) {
+        cout << x << ' ';
+        return;
+    }
+    revert_input(xx);
+    cout << x << ' ';
 }

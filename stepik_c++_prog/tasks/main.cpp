@@ -2,21 +2,17 @@
 
 using namespace std;
 
-void call(int x) {
-    int xx;
-    cin >> xx;
-    if (xx == 0) {
-        cout << x << ' ';
-        return;
+void print_arr(int a[], unsigned size) {
+    for (int i = 0; i < size; ++i) {
+        cout << a[i] << ' ';
     }
-    call(xx);
-    cout << x << ' ';
+    cout << '\n';
 }
+
 
 int main()
 {
-    int x;
-    cin >> x;
-    call(x);
+    int x[10] = {1, 2, 3, 4, 5};
+    print_arr(x, 10);
     return 0;
 }
