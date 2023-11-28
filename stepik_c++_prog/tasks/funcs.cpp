@@ -30,8 +30,7 @@ int log(int x) {
     return p - 1;
 }
 
-unsigned gcd(unsigned a, unsigned b)
-{
+unsigned gcd(unsigned a, unsigned b) {
     if (a == 0) {
         return b;
     }
@@ -53,4 +52,82 @@ void revert_input(int x) {
     }
     revert_input(xx);
     cout << x << ' ';
+}
+
+void reverse(int a[], unsigned start, unsigned end) {
+    while (start < end) {
+        int t = a[start];
+        a[start++] = a[end];
+        a[end--] = t;
+    }
+}
+
+void rotate(int a[], unsigned size, int shift) {
+    reverse(a, 0, size - 1);
+    reverse(a, 0, size - (shift % size) - 1);
+    reverse(a, size - (shift % size), size - 1);
+}
+
+unsigned strlen_1(const char *str)
+{
+    unsigned r = 0;
+    while(*str != '\0') {
+        str += 1;
+        r += 1;
+    }
+    return r;
+}
+
+bool contains(int *m, int size, int value) {
+    for (int i = 0; i < size; ++i) {
+        if (m[i] == value) {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool contains(int *p, int *q, int value) {
+    for ( ; p != q; ++p) {
+        if (*p == value) {
+            return true;
+        }
+    }
+    return false;
+}
+
+int max(int *p, int *q) {
+    int max = *p;
+    for ( ; p != q; ++p) {
+        if (*p > max) {
+            max = *p;
+        }
+    }
+    return max;
+}
+
+bool max(int *p, int *q, int *res) {
+    if (p == q) {
+        return false;
+    }
+    *res = *p;
+    for ( ; p != q; ++p) {
+        if (*p > *res) {
+            *res = *p;
+        }
+    }
+    return true;
+}
+
+bool max(int *p, int *q, int **res) {
+    if (p == q) {
+        return false;
+    }
+    *res = p;
+    for ( ; p != q; ++p) {
+        if (*p > **res) {
+            *res = p;
+        }
+    }
+    return true;
 }
