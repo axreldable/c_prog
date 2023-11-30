@@ -3,4 +3,7 @@ project(c_prog C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(cs61c tries/try.c)
+add_executable(
+        try.c
+        try.c
+)

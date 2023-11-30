@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 typedef struct {
     int x;
     int y;
@@ -22,7 +20,7 @@ void print_arr(int *arr, int l) {
     printf("\n");
 }
 
-int main() {
+void hello() {
     printf("Hello!\n");
     printf("///////////////////////////////////////////\n");
 
@@ -51,6 +49,4 @@ int main() {
     printf("%d\n", *p);
     print_arr(x, 4);
     printf("///////////////////////////////////////////\n");
-
-    return 0;
 }
